@@ -77,7 +77,25 @@ def support_ticket_ui(problem):
 """
 
     except Exception as error:
-        return f"❌ AgentDesk error: {error}"
+
+        error_text = str(error).lower()
+
+        if "429" in error_text or "rate_limit" in error_text or "rate limit" in error_text:
+            return """
+## ⚠️ AgentDesk is temporarily busy
+
+The AI service has reached its current usage limit.
+
+Please wait a few minutes and try your support request again.
+"""
+
+        return """
+## ⚠️ AgentDesk could not complete this request
+
+A temporary service error occurred.
+
+Please try again shortly.
+"""
 
 
 with gr.Blocks(title="AgentDesk") as app:
