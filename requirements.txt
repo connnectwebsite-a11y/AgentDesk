@@ -1,0 +1,3 @@
+gradio
+groq
+tavily-python
