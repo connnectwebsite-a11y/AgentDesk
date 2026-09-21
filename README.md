@@ -1,5 +1,15 @@
 # 🛠️ AgentDesk
 
+
+## 🌐 Live Demo
+
+Try AgentDesk here:
+
+https://agentdesk-9o07.onrender.com
+
+> The demo runs on a free Render instance and may take around 50 seconds to wake after a period of inactivity.
+
+
 AgentDesk is a multi-agent AI IT support system that researches technical problems using official documentation, generates troubleshooting instructions, and performs automated quality assurance before responding to the user.
 
 ## 🚀 Features
